@@ -1,6 +1,6 @@
 # Labdesktop Portal
 
-A dependency-free landing page for laboratory applications hosted at `http://labdesktop.clients.net.dtu.dk/`.
+A dependency-free landing page for laboratory applications hosted at `http://labdesktop.clients.net.dtu.dk/`. Its green accent and logo use DTU's official Green RGB identity assets.
 
 ## Deploy
 
@@ -9,6 +9,8 @@ Copy this repository's static files to `/var/www/lab-portal` and make them reada
 ```bash
 sudo install -d -m 755 /var/www/lab-portal
 sudo install -m 644 index.html styles.css app.js apps.json /var/www/lab-portal/
+sudo install -d -m 755 /var/www/lab-portal/assets
+sudo install -m 644 assets/favicon.ico assets/dtu-logo-green.png /var/www/lab-portal/assets/
 sudo caddy validate --config /etc/caddy/Caddyfile
 sudo systemctl reload caddy
 ```

@@ -1,14 +1,15 @@
 :root {
-  --red: #990000;
-  --red-dark: #730000;
-  --red-soft: #f8eaea;
+  --accent: #008835;
+  --accent-soft: #e5f3ea;
+  --error: #990000;
+  --error-soft: #f8eaea;
   --ink: #1d1d1f;
   --muted: #626269;
   --line: #dedee2;
   --surface: #ffffff;
   --canvas: #f5f5f6;
-  --green: #147a43;
-  --green-soft: #e9f6ee;
+  --available: #008835;
+  --available-soft: #e5f3ea;
   --amber: #8a5a00;
   --amber-soft: #fff4d6;
   --shadow: 0 14px 35px rgb(24 24 27 / 8%);
@@ -25,12 +26,12 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 88% 8%, rgb(153 0 0 / 8%), transparent 27rem),
+    radial-gradient(circle at 88% 8%, rgb(0 136 53 / 9%), transparent 27rem),
     var(--canvas);
 }
 
 .site-header {
-  border-top: 5px solid var(--red);
+  border-top: 5px solid var(--accent);
   border-bottom: 1px solid var(--line);
   background: rgb(255 255 255 / 92%);
 }
@@ -60,17 +61,10 @@ footer {
   text-decoration: none;
 }
 
-.brand-mark {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  border-radius: 8px;
-  color: white;
-  background: var(--red);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.09em;
+.brand-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
 }
 
 .network-label {
@@ -84,7 +78,7 @@ main { padding-block: 72px 88px; }
 
 .eyebrow {
   margin: 0 0 10px;
-  color: var(--red);
+  color: var(--accent);
   font-size: 0.75rem;
   font-weight: 780;
   letter-spacing: 0.13em;
@@ -139,7 +133,7 @@ h2 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--green);
+  background: var(--available);
 }
 
 .app-grid {
@@ -169,7 +163,7 @@ h2 {
   position: absolute;
   inset: 0 0 auto;
   height: 4px;
-  background: var(--red);
+  background: var(--accent);
 }
 
 .app-card:hover {
@@ -179,7 +173,7 @@ h2 {
 }
 
 .app-card:focus-visible {
-  outline: 3px solid var(--red);
+  outline: 3px solid var(--accent);
   outline-offset: 4px;
 }
 
@@ -197,8 +191,8 @@ h2 {
   height: 48px;
   place-items: center;
   border-radius: 12px;
-  color: var(--red);
-  background: var(--red-soft);
+  color: var(--accent);
+  background: var(--accent-soft);
   font-family: Georgia, serif;
   font-size: 1.35rem;
   font-style: italic;
@@ -225,8 +219,8 @@ h2 {
   background: currentColor;
 }
 
-.status.available { color: var(--green); background: var(--green-soft); }
-.status.unavailable { color: var(--red-dark); background: var(--red-soft); }
+.status.available { color: var(--available); background: var(--available-soft); }
+.status.unavailable { color: var(--error); background: var(--error-soft); }
 
 .category {
   margin: 27px 0 7px;
@@ -251,7 +245,7 @@ h2 {
 
 .card-action {
   margin-top: auto;
-  color: var(--red);
+  color: var(--accent);
   font-size: 0.9rem;
   font-weight: 750;
 }
@@ -266,7 +260,7 @@ h2 {
   background: var(--surface);
 }
 
-.notice-error { color: var(--red-dark); border-color: #d9aaaa; }
+.notice-error { color: var(--error); border-color: #d9aaaa; }
 
 footer {
   padding-block: 24px;
