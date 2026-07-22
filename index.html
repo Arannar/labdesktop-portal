@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#990000">
+  <title>Lab Applications</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Lab Applications home">
+        <span class="brand-mark" aria-hidden="true">LAB</span>
+        <span>Lab Applications</span>
+      </a>
+      <span class="network-label">labdesktop</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Research infrastructure</p>
+      <h1 id="page-title">Instruments and experimental setups</h1>
+      <p class="intro">Select an application to control an instrument or access an experimental setup on this server.</p>
+    </section>
+
+    <section class="applications" aria-labelledby="applications-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Available services</p>
+          <h2 id="applications-title">Applications</h2>
+        </div>
+        <p class="status-note"><span class="pulse-dot" aria-hidden="true"></span>Status shows web service availability</p>
+      </div>
+      <div id="app-grid" class="app-grid" aria-live="polite" aria-busy="true"></div>
+      <noscript>
+        <p class="notice notice-error">JavaScript is required to load the application directory and service status.</p>
+      </noscript>
+    </section>
+  </main>
+
+  <footer>
+    <p>Laboratory network service · Traffic is not encrypted</p>
+  </footer>
+</body>
+</html>

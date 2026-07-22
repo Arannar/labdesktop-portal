@@ -1,0 +1,12 @@
+http://labdesktop.clients.net.dtu.dk {
+    redir /impedance-analyzer /impedance-analyzer/ 308
+
+    handle_path /impedance-analyzer/* {
+        reverse_proxy 127.0.0.1:18080
+    }
+
+    handle {
+        root * /var/www/lab-portal
+        file_server
+    }
+}

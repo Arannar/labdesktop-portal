@@ -1,0 +1,10 @@
+[
+  {
+    "id": "impedance-analyzer",
+    "name": "HP 4294A Impedance Analyzer",
+    "description": "Configure calibration and sweeps, inspect measurement data, and import or export impedance spectra.",
+    "category": "Impedance spectroscopy",
+    "path": "/impedance-analyzer/",
+    "healthUrl": "/impedance-analyzer/healthz"
+  }
+]
